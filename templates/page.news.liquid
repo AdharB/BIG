@@ -1,0 +1,135 @@
+<div class="big-news-page-title">
+  <h1>Making <span>BIG</span> Headlines!</h1>
+</div>
+
+<div class="big-news-page">
+  <div class="big-news-page-list">
+    
+    {% if shop.metafields.featured_articles.article1_title != blank %}
+    <div class="big-news-item new-one">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ shop.metafields.featured_articles.article1_image_desktop }}" alt="" />
+        <img class="mobile" src="{{ shop.metafields.featured_articles.article1_image_mobile }}" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ shop.metafields.featured_articles.article1_link }}">{{ shop.metafields.featured_articles.article1_title }}</a></h2>
+          <p class="desktop">{{ shop.metafields.featured_articles.article1_description }}</p>
+          <p class="mobile">{{ shop.metafields.featured_articles.article1_description | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ shop.metafields.featured_articles.article1_link }}" class="news-link">READ MORE</a> <span class="news-date">{{ shop.metafields.featured_articles.article1_year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if shop.metafields.featured_articles.article2_title != blank %}
+	<div class="big-news-item">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ shop.metafields.featured_articles.article2_image_desktop }}" alt="" />
+        <img class="mobile" src="{{ shop.metafields.featured_articles.article2_image_mobile }}" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ shop.metafields.featured_articles.article2_link }}">{{ shop.metafields.featured_articles.article2_title }}</a></h2>
+          <p class="desktop">{{ shop.metafields.featured_articles.article2_description }}</p>
+          <p class="mobile">{{ shop.metafields.featured_articles.article2_description | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ shop.metafields.featured_articles.article2_link }}" class="news-link">READ MORE</a> <span class="news-date">{{ shop.metafields.featured_articles.article2_year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+	{% if shop.metafields.featured_articles.article3_title != blank %}
+	<div class="big-news-item">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ shop.metafields.featured_articles.article3_image_desktop }}" alt="" />
+        <img class="mobile" src="{{ shop.metafields.featured_articles.article3_image_mobile }}" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ shop.metafields.featured_articles.article3_link }}">{{ shop.metafields.featured_articles.article3_title }}</a></h2>
+          <p class="desktop">{{ shop.metafields.featured_articles.article3_description }}</p>
+          <p class="mobile">{{ shop.metafields.featured_articles.article3_description | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ shop.metafields.featured_articles.article3_link }}" class="news-link">READ MORE</a> <span class="news-date">{{ shop.metafields.featured_articles.article3_year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if shop.metafields.featured_articles.article4_title != blank %}
+	<div class="big-news-item">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ shop.metafields.featured_articles.article4_image_desktop }}" alt="" />
+        <img class="mobile" src="{{ shop.metafields.featured_articles.article4_image_mobile }}" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ shop.metafields.featured_articles.article4_link }}">{{ shop.metafields.featured_articles.article4_title }}</a></h2>
+          <p class="desktop">{{ shop.metafields.featured_articles.article4_description }}</p>
+          <p class="mobile">{{ shop.metafields.featured_articles.article4_description | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ shop.metafields.featured_articles.article4_link }}" class="news-link">READ MORE</a> <span class="news-date">{{ shop.metafields.featured_articles.article4_year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if shop.metafields.featured_articles.article5_title != blank %}
+	<div class="big-news-item">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ shop.metafields.featured_articles.article5_image_desktop }}" alt="" />
+        <img class="mobile" src="{{ shop.metafields.featured_articles.article5_image_mobile }}" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ shop.metafields.featured_articles.article5_link }}">{{ shop.metafields.featured_articles.article5_title }}</a></h2>
+          <p class="desktop">{{ shop.metafields.featured_articles.article5_description }}</p>
+          <p class="mobile">{{ shop.metafields.featured_articles.article5_description | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ shop.metafields.featured_articles.article5_link }}" class="news-link">READ MORE</a> <span class="news-date">{{ shop.metafields.featured_articles.article5_year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if shop.metafields.featured_articles.article6_title != blank %}
+	<div class="big-news-item">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ shop.metafields.featured_articles.article6_image_desktop }}" alt="" />
+        <img class="mobile" src="{{ shop.metafields.featured_articles.article6_image_mobile }}" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ shop.metafields.featured_articles.article6_link }}">{{ shop.metafields.featured_articles.article6_title }}</a></h2>
+          <p class="desktop">{{ shop.metafields.featured_articles.article6_description }}</p>
+          <p class="mobile">{{ shop.metafields.featured_articles.article6_description | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ shop.metafields.featured_articles.article6_link }}" class="news-link">READ MORE</a> <span class="news-date">{{ shop.metafields.featured_articles.article6_year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+
+  </div>
+  
+  
+</div>
+<div class="archive-link"><a href="/blogs/news">ARCHIVE</a></div>
+
+
+<script src="https://masonry.desandro.com/v2/js/jquery-1.7.1.min.js"></script>
+<script src="https://masonry.desandro.com/v2/jquery.masonry.min.js"></script>
+<script>
+
+  var jq171 = $.noConflict();
+
+  jq171(window).load(function(){
+
+   if (jq171(window).width() > 767) {
+    jq171('.big-news-page-list').masonry({
+      itemSelector: '.big-news-item',
+      columnWidth: 1
+    });
+
+  }
+});
+
+</script>

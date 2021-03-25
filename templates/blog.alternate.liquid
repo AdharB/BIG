@@ -1,0 +1,63 @@
+{% paginate blog.articles by 6 %}
+<div class="big-news-page-title">
+  <h1>Making <span>BIG</span> Headlines!</h1>
+</div>
+
+<div class="big-news-page">
+  <div class="big-news-page-list">
+    
+    {% for article in blog.articles %}
+    
+    <div class="big-news-item {% if forloop.rindex == 6 %} new-one {% endif %}">
+      <div class="big-news-item-box">
+        <img class="desktop" src="{{ article.image | img_url: '900x900' }}"
+                      data-src="{{ img_url }}"
+                      data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                      data-aspectratio="{{ article.image.aspect_ratio }}"
+                      data-sizes="auto" alt="" />
+        <img class="mobile" src="{{ article.image | img_url: '900x900' }}"
+                      data-src="{{ img_url }}"
+                      data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                      data-aspectratio="{{ article.image.aspect_ratio }}"
+                      data-sizes="auto" alt="" />
+        <div class="big-news-detail">
+          <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+          <p class="desktop">{{ article.content | strip_html | truncate: 150 }}</p>
+          <p class="mobile">{{ article.content | strip_html | truncate: 50 }}</p>
+          <div class="big-news-detail-bottom">
+            <a href="{{ article.url }}" class="news-link">READ MORE</a> <span class="news-date"> {{ article.published_at | date: "%b, %Y" }} </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    
+  </div>
+   <div class="archive-link"><a href="/blogs/news">ARCHIVE</a></div>
+</div> 
+
+{% if paginate.pages > 1 %}
+  {% include 'pagination' %}
+{% endif %}
+
+{% endpaginate %}
+
+<script src="https://masonry.desandro.com/v2/js/jquery-1.7.1.min.js"></script>
+<script src="https://masonry.desandro.com/v2/jquery.masonry.min.js"></script>
+<script>
+
+  var jq171 = $.noConflict();
+
+  jq171(window).load(function(){
+
+   if (jq171(window).width() > 767) {
+    jq171('.big-news-page-list').masonry({
+      itemSelector: '.big-news-item',
+      columnWidth: 1
+    });
+
+  }
+});
+
+</script>
+

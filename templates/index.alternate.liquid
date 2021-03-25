@@ -1,0 +1,92 @@
+{{ content_for_index }}
+<div class="home-page-text-section">
+	<div class="container">
+		<h1><span>DELIVERING</span> 
+          <span class="true_beauty"> TRUE BEAUTY.</span>
+        </h1>
+	</div>
+</div>
+
+ <!-- Removing Babe Lash 
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo2.png?14354" alt="" />
+    		</div>
+		  -->
+<div class="home-page-logo-slider" style="position:relative;">
+		<div class="home-logo-slider">
+			<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo1.png?14354" alt="" />
+    		</div>
+         	<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0271/1198/1135/files/DB-Logo-White-70px.png?v=1614709498" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo4.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo5.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo6.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo7.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo8.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo9.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo10.png?14354" alt="" />
+    		</div>
+		</div>
+</div>
+
+{{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
+<script type="text/javascript">
+
+	$(document).on('ready', function() {
+  		 
+      	$('.home-logo-slider').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:false,
+                fluidSpeed: true,
+                smartSpeed:500,
+                items:6,
+                dots:false,
+                animateOut: 'fadeOut',
+    			animateIn: 'flipInX',
+    			fluidSpeed: true,
+                responsive: {
+                  0: {
+                    items: 2,
+                  },
+                  767: {
+                    items: 3,
+                  },
+                  991: {
+                    items: 4,
+                   },
+                  1200: {
+                    items: 5,
+                   },
+                  1600: {
+                    items: 6,
+                   }
+                }
+              });
+        
+	
+  
+    
+
+	});
+	
+</script>

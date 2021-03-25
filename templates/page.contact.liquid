@@ -1,0 +1,98 @@
+<div class="page-top-banner contact-us-page-banner">
+  <img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/contact-us-page-banner.jpg?14366" alt="" />
+  <div class="page-top-banner-text">
+    <div class="page-top-banner-text-box">
+      <div class="page-top-banner-text-box-left">
+        <h1 class="contact_us">Reach out <br />to us!</h1>
+        <h3 class="contact_hear_from_you">Whether you have a compliment, question <br />or concern, we’d love to hear from you!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  {% if page.content.size > 0 %}
+  <div class="rte">
+    {{ page.content }}
+  </div>
+  {% endif %}
+
+
+
+  <div class="cm-contact-form form-vertical">
+    {%- assign formId = 'ContactForm' -%}
+    {% form 'contact', id: formId %}
+    {% include 'form-status', form_id: formId %}
+    <div class="row-form-group">
+      <div class="form-group form-title">
+        <h2>Send us a message</h2>
+      </div>
+    </div>
+
+    <div class="form-border"></div>
+
+    <div class="row-form-group">
+      <div class="form-group">
+        <label for="{{ formId }}-name">Your Name</label>
+        <input type="text" class="form-control" id="{{ formId }}-name" name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+      </div>
+
+      <div class="form-group">
+        <label for="{{ formId }}-email">{{ 'contact.form.email' | t }}*</label>
+        <input
+        type="email" class="form-control"
+        id="{{ formId }}-email"
+        name="contact[email]"
+        autocorrect="off"
+        autocapitalize="off"
+        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+        aria-required="true"
+        {%- if form.errors contains 'email' -%}
+        class="input--error"
+        aria-invalid="true"
+        aria-describedby="{{ formId }}-email-error"
+        {%- endif -%}>
+        {%- if form.errors contains 'email' -%}
+        <span id="{{ formId}}-email-error" class="input-error-message">
+          <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+          {% include 'icon-error' %}
+          <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+        </span>
+        {%- endif -%}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
+        <input type="tel" class="form-control" id="{{ formId }}-phone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+      </div>
+    </div>
+
+    <div class="form-border"></div>
+
+    <div class="row-form-group">
+      <div class="form-group">
+        <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
+        <textarea class="form-control" id="{{ formId }}-message" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+      </div>
+    </div>
+
+    <div class="form-border"></div>
+
+    <div class="row-form-group text-right">
+      <div class="form-group">
+        <input type="submit" class="btn" value="Send Message">
+      </div>
+    </div>
+    {% endform %}
+
+  </div>
+
+  <div class="cm-contact-address">
+    <p>631 North 400 West, Salt Lake City, UT 84103 <br />
+        801.206.4781<br />
+        <a href="mailto:info@beautyindustrygroup.com">info@beautyindustrygroup.com</a><br />
+        Monday-Friday 9:00am - 5:00pm MDT</p>
+  </div>
+
+</div>

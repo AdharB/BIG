@@ -1,0 +1,111 @@
+{{ content_for_index }}
+<div class="home-page-text-section">
+	<div class="container">
+		<h1><span>DELIVERING</span> 
+          <span class="true_beauty"> TRUE BEAUTY.</span>
+        </h1>
+	</div>
+</div>
+
+ <!-- Removing Babe Lash 
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo2.png?14354" alt="" />
+    		</div>
+		  -->
+<div class="home-page-logo-slider">
+		<div class="home-logo-slider">
+          	
+			<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo1.png?14354" alt="" />
+    		</div>
+         	<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0271/1198/1135/files/DB-Logo-White-70px.png?v=1614709498" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo4.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo5.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo6.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo7.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo8.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo9.png?14354" alt="" />
+    		</div>
+    		<div>
+      			<img src="https://cdn.shopify.com/s/files/1/0079/9028/0243/files/home-page-silder-logo10.png?14354" alt="" />
+    		</div>
+		</div>
+</div>
+
+
+<script src="{{ 'slick.js' | asset_url }}" defer="defer"></script>
+<script type="text/javascript">
+
+	$(document).on('ready', function() {
+  		 
+      	
+		jQuery('.home-logo-slider').slick({
+			speed: 3000,
+		    autoplay: true,
+		    autoplaySpeed: 0,
+		   	centerMode: true,
+		    cssEase: 'linear',
+		    slidesToShow: 8,
+		    slidesToScroll: 1,
+		  	infinite: true,
+		    initialSlide: 1,
+        
+		
+			dots: false,
+			touchMove: true,
+			arrows: false,
+			pauseOnHover: false,
+          
+		responsive: [
+			{
+		      breakpoint: 1600,
+		      settings: {
+		        slidesToShow: 6
+		      }
+		    },
+		    {
+		      breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 5
+		      }
+		    },
+		    {
+		      breakpoint: 991,
+		      settings: {
+		        slidesToShow: 4
+		      }
+		    },
+		    {
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 3
+		      }
+		    },
+		    {
+		      breakpoint: 479,
+		      settings: {
+		        slidesToShow: 2
+		      }
+		    }
+		  ]
+        });
+    
+  
+    
+
+	});
+	
+</script>
